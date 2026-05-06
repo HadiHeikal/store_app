@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:store_app/core/services/api_exceptions.dart';
 import 'package:store_app/core/services/api_service.dart';
-import 'package:store_app/features/home/data/product_model.dart';
+import 'package:store_app/features/home/data/models/product_model.dart';
 
 class ProductService {
   // List to hold products as a list of ProductModel
