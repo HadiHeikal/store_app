@@ -18,7 +18,7 @@ class ProductService {
           .toList();
       return products;
     } on DioException catch (e) {
-      ApiException.handleEror(e);
+      ApiException.handleError(e);
       rethrow;
     }
   }

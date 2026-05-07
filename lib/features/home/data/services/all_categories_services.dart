@@ -5,10 +5,10 @@ import 'package:store_app/core/services/api_service.dart';
 
 import '../../../../core/services/api_exceptions.dart';
 
-class CategoriesService {
-  List<CategoriesService> Categories = [];
-  
-  Future<List<CategoriesService>> getAllCategories() async {
+class AllCategoriesService {
+  List<AllCategoriesService> Categories = [];
+
+  Future<List<AllCategoriesService>> getAllCategories() async {
     try{
       final Response response = await ApiService().get('/categories');
       Categories = response.data;

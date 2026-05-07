@@ -9,7 +9,7 @@ class PrefHelpers {
     await prefs.setString(tokenKey, token);
   }
 
-  // retrieve token from SharedPrefrences
+  // retrieve token from SharedPreferences
   static Future<String> getToken() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getString(tokenKey) ?? '';

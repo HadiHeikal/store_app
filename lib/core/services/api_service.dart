@@ -5,14 +5,14 @@ import 'package:store_app/core/services/dio_client.dart';
 class ApiService {
   final DioClient _dioClient = DioClient();
 
-  // Crud operations for products
+  // Crud operations
   /// get request
   Future<dynamic> get(String endPoint) async {
     try {
       final Response response = await _dioClient.dio.get(endPoint);
       return response.data;
     } on DioException catch (e) {
-      throw ApiException.handleEror(e);
+      throw ApiException.handleError(e);
     }
   }
 
@@ -22,7 +22,7 @@ class ApiService {
       final Response response = await _dioClient.dio.post(endPoint, data: data);
       return response.data;
     } on DioException catch (e) {
-      throw ApiException.handleEror(e);
+      throw ApiException.handleError(e);
     }
   }
 
@@ -32,7 +32,7 @@ class ApiService {
       final Response response = await _dioClient.dio.put(endPoint, data: data);
       return response.data;
     } on DioException catch (e) {
-      throw ApiException.handleEror(e);
+      throw ApiException.handleError(e);
     }
   }
 
@@ -42,7 +42,7 @@ class ApiService {
       final Response response = await _dioClient.dio.delete(endPoint);
       return response.data;
     } on DioException catch (e) {
-      throw ApiException.handleEror(e);
+      throw ApiException.handleError(e);
     }
   }
 }
