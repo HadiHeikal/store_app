@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/features/home/views/home_root.dart';
 
 class AppRoutes extends StatelessWidget {
   const AppRoutes({super.key});
@@ -6,14 +7,9 @@ class AppRoutes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const Scaffold(body: Center(child: Text('Hello, World!'))),
-      // Define the routes for the application
-      routes: {
-        '/home': (context) =>
-            const Scaffold(body: Center(child: Text('Home Page'))),
-        '/about': (context) =>
-            const Scaffold(body: Center(child: Text('About Page'))),
-      },
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {'/': (context) => HomeRoot()},
     );
   }
 }
