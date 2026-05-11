@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomCard extends StatelessWidget {
   final String title;
   final String imgurl;
-  final int price;
+  final double price;
   final Function()? onTap;
   final Function()? onFavoriteTap;
   final bool isFavorite;

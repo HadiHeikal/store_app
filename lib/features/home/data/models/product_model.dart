@@ -18,12 +18,12 @@ class ProductModel {
   // factory method to create a ProductModel from JSON
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      id: json['id'],
-      title: json['title'],
-      description: json['description'],
-      images: json['images'][0],
-      price: json['price'],
-      rating: json['rating'],
+      id: json['id'].toString(),
+      title: json['title'] as String,
+      description: json['description'] as String,
+      images: (json['images'] as List).isNotEmpty ? json['images'][0] as String : '',
+      price: (json['price'] as num).toDouble(),
+      rating: (json['rating'] as num).toDouble(),
     );
   }
 }
