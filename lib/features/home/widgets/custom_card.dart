@@ -45,12 +45,14 @@ class CustomCard extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 30,
+              bottom: 35,
               left: 15,
               right: 0,
               child: Text(
                 title,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
             ),
             Positioned.fill(
